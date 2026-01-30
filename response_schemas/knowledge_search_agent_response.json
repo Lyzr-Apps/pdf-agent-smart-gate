@@ -1,0 +1,62 @@
+{
+  "agent_name": "Knowledge Search Agent",
+  "agent_id": "697cd6c0d36f070193f5c3d9",
+  "agent_purpose": "research",
+  "description": "Searches PDF documents and returns comprehensive answers with source citations, confidence scores, and follow-up suggestions",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "answer": "string",
+      "sources": [
+        "any"
+      ],
+      "confidence": "number",
+      "follow_up_suggestions": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "query_type": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "answer": "Sorry, I could not locate information regarding key concepts in machine learning within the available knowledge base documents. Please try refining your query or upload relevant documents.",
+      "sources": [],
+      "confidence": 0.0,
+      "follow_up_suggestions": [
+        "Can you provide an overview of supervised and unsupervised learning?",
+        "What are the common algorithms used in machine learning?"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Knowledge Search Agent",
+      "timestamp": "2024-06-16T03:08:13Z",
+      "query_type": "initial"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-30T16:06:07.818878",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "answer": "Sorry, I could not locate information regarding key concepts in machine learning within the available knowledge base documents. Please try refining your query or upload relevant documents.",
+      "sources": [],
+      "confidence": 0.0,
+      "follow_up_suggestions": [
+        "Can you provide an overview of supervised and unsupervised learning?",
+        "What are the common algorithms used in machine learning?"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Knowledge Search Agent",
+      "timestamp": "2024-06-16T03:08:13Z",
+      "query_type": "initial"
+    }
+  },
+  "test_passed": true
+}

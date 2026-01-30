@@ -1,0 +1,74 @@
+{
+  "workflow_name": "Intelligent Knowledge Search Assistant",
+  "workflow_type": "single_agent",
+  "nodes": [
+    {
+      "id": "user_input",
+      "type": "Input",
+      "label": "User Query",
+      "nodeCategory": "input",
+      "position": {
+        "x": 100,
+        "y": 200
+      }
+    },
+    {
+      "id": "knowledge_search_agent",
+      "type": "Agent",
+      "label": "Knowledge Search Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697cd6c0d36f070193f5c3d9",
+      "position": {
+        "x": 400,
+        "y": 200
+      }
+    },
+    {
+      "id": "response_output",
+      "type": "Output",
+      "label": "Answer with Citations",
+      "nodeCategory": "end",
+      "position": {
+        "x": 700,
+        "y": 200
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "user_input",
+      "target": "knowledge_search_agent"
+    },
+    {
+      "source": "knowledge_search_agent",
+      "target": "response_output"
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "697cd6c0d36f070193f5c3d9",
+      "name": "Knowledge Search Agent",
+      "type": "single",
+      "description": "Searches through uploaded PDF documents to find relevant information and generates comprehensive answers with source citations. Maintains conversation context for follow-up queries and provides accurate, well-structured responses similar to Perplexity's search experience.",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "rag_id": "697cd6ad47177de38546d9dd",
+      "rag_name": "pdfdocumentsknowledgebasemabu",
+      "trigger": "Search button or Enter key on Chat Interface"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "rag_id": "697cd6ad47177de38546d9dd",
+      "name": "PDF Documents Knowledge Base",
+      "collection_name": "pdfdocumentsknowledgebasemabu",
+      "description": "Stores and indexes user-uploaded PDF documents for semantic search and retrieval",
+      "connected_agents": ["697cd6c0d36f070193f5c3d9"]
+    }
+  ],
+  "created_at": "2026-01-30T00:00:00Z",
+  "updated_at": "2026-01-30T00:00:00Z"
+}

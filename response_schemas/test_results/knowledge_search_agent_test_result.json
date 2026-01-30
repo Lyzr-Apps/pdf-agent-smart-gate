@@ -1,0 +1,27 @@
+{
+  "agent_name": "Knowledge Search Agent",
+  "agent_id": "697cd6c0d36f070193f5c3d9",
+  "test_message": "What are the key concepts in machine learning?",
+  "expected_purpose": "Search PDF documents and provide answers with citations",
+  "timestamp": "2026-01-30T16:06:07.817537",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "answer": "Sorry, I could not locate information regarding key concepts in machine learning within the available knowledge base documents. Please try refining your query or upload relevant documents.",
+      "sources": [],
+      "confidence": 0.0,
+      "follow_up_suggestions": [
+        "Can you provide an overview of supervised and unsupervised learning?",
+        "What are the common algorithms used in machine learning?"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Knowledge Search Agent",
+      "timestamp": "2024-06-16T03:08:13Z",
+      "query_type": "initial"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"answer\": \"Sorry, I could not locate information regarding key concepts in machine learning within the available knowledge base documents. Please try refining your query or upload relevant documents.\",\n    \"sources\": [],\n    \"confidence\": 0.0,\n    \"follow_up_suggestions\": [\n      \"Can you provide an overview of supervised and unsupervised learning?\",\n      \"What are the common algorithms used in machine learning?\"\n    ]\n  },\n  \"metadata\": {\n    \"agent_name\": \"Knowledge Search Agent\",\n    \"timestamp\": \"2024-06-16T03:08:13Z\",\n    \"query_type\": \"initial\"\n  }\n}"
+}
